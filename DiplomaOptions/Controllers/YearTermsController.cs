@@ -35,6 +35,8 @@ namespace DiplomaOptions.Controllers
         // GET: YearTerms/Create
         public ActionResult Create()
         {
+            var terms = db.YearTerms.OrderByDescending(x => x.Term);
+            ViewBag.Terms = new SelectList(terms, "YearTermId", "Term");
             return View();
         }
 
@@ -69,6 +71,9 @@ namespace DiplomaOptions.Controllers
         // GET: YearTerms/Edit/5
         public ActionResult Edit(int? id)
         {
+            var terms = db.YearTerms.OrderByDescending(x => x.Term);
+            ViewBag.Terms = new SelectList(terms, "YearTermId", "Term");
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

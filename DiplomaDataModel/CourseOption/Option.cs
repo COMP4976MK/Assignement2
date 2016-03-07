@@ -9,6 +9,8 @@ namespace DiplomaDataModel.CourseOption
 
         [MaxLength(50, ErrorMessage = "Max Length 50 Characters")]
         public string Title { get; set; }
+
+        [Display(Name = "Is Active: ")]
         public bool IsActive { get; set; }
     }
 }
