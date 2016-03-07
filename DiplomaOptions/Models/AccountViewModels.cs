@@ -49,7 +49,7 @@ namespace DiplomaOptions.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "UserName")]
+        [Display(Name = "User Name")]
         public string UserName { get; set; }
 
         [Required]

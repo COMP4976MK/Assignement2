@@ -12,6 +12,7 @@ namespace DiplomaDataModel.CourseOption
 
         public int Term { get; set; }
 
+        [Display(Name = "Is Default: ")]
         public bool IsDefault { get; set; }
     }
 }
